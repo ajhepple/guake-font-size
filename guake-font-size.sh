@@ -5,8 +5,8 @@
 # launch the Guake preferences dialog. 
 # At the time of writing I used <Ctrl><Shift>+ and <Ctrl><Shift>-       
 
-# One mandatory argument with value 'decrement' or 'increment'
-if ([ "$1" != "decrement" ] && [ "$1" != "increment" ]); then
+# One mandatory argument with value only two valid values
+if ([ "$1" != "decrease" ] && [ "$1" != "increase" ]); then
     echo "Usage: guake-font-size increment|decrement"
     exit
 fi
@@ -19,7 +19,7 @@ STYLE=`gconftool-2 --get /apps/guake/style/font/style`
 CURRENT_SIZE=${STYLE##* }
 
 # Increment/decrement the current size using arithmetic expansion
-if [ $1 = "increment" ]; then
+if [ $1 = "increase" ]; then
     NEW_SIZE=$((CURRENT_SIZE + 1))
 else
     NEW_SIZE=$((CURRENT_SIZE - 1))
