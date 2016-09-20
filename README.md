@@ -7,7 +7,7 @@ Guake users to increase or decrease their font size without having to
 launch the Guake preferences window.
 
 ## Usage
-    $ guake-font-size increment|decrement
+    $ guake-font-size increase|decrease
 
 ## Dependencies
 * [gconftool-2](http://www.linuxfromscratch.org/blfs/view/svn/gnome/GConf.html) (which should be present with Guake installed)
